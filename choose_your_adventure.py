@@ -14,25 +14,44 @@ if answer == "left":
         print(
             "You attempt to swim through the river and are surrounded by alligators. You lose the game."
         )
+        quit()
     elif answer == "walk":
         print("You walked for many miles, ran out of water, and lost the game.")
+        quit()
     else:
         print("That is not a valid option. You lose.")
+        quit()
 
 elif answer == "right":
     answer = input(
         "You come to a bridge, it looks wobbly, would you like to cross or turn back? Type 'cross' for cross OR 'back' for back. "
     ).lower()
 
-    if answer == "cross":
-        print(
-            "You successfully cross the bridge. After crossing you see a car and a bicycle. Which will you choose? Type 'car' for car OR 'bicycle' for bicycle. "
-        )
-    elif answer == "back":
-        print("You walked for many miles, ran out of water, and lost the game.")
+    if answer == "back":
+        print("You go back to the main road and lose the game.")
+        quit()
+    elif answer == "cross":
+        answer = input(
+            "You cross the bridge and meet a stranger. Do you talk to them? Type 'yes' for yes OR 'no' for no. "
+        ).lower()
+        if answer == "yes":
+            print(
+                "You talk to the stranger and they give you 25 million dollars. You win the game."
+            )
+
+        elif answer == "no":
+            print(
+                "You ignore the stranger. He walks away with all your hopes of escape. You lose the game."
+            )
+        else:
+            print("That is not a valid option. You lose.")
+            quit()
+
     else:
         print("That is not a valid option. You lose.")
+        quit()
 
     print()
 else:
     print("That is not a valid option. You lose.")
+    quit()
