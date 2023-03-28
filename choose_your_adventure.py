@@ -55,3 +55,5 @@ elif answer == "right":
 else:
     print("That is not a valid option. You lose.")
     quit()
+
+print("Thanks for playing", name, "!")
